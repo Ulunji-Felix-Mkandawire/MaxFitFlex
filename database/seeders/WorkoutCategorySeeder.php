@@ -3,7 +3,6 @@
 namespace Database\Seeders;
 
 use App\Models\WorkoutCategory;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class WorkoutCategorySeeder extends Seeder
@@ -23,6 +22,6 @@ class WorkoutCategorySeeder extends Seeder
             ['name' => 'midsection & core'],
         ]);
 
-        $categories->map( fn($category) => WorkoutCategory::create($category) );
+        $categories->map(fn ($category) => WorkoutCategory::create($category));
     }
 }
