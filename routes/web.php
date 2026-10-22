@@ -2,4 +2,4 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::view('/', 'workouts.index');
+Route::view('/', 'general.dashboard')->name('dashboard');
