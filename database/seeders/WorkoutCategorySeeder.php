@@ -13,6 +13,16 @@ class WorkoutCategorySeeder extends Seeder
      */
     public function run(): void
     {
-        WorkoutCategory::factory()->count(3)->create();
+        // create records with faker
+        // WorkoutCategory::factory()->count(3)->create();
+
+        // create real default values
+        $categories = collect([
+            ['name' => 'upper body'],
+            ['name' => 'lower body'],
+            ['name' => 'midsection & core'],
+        ]);
+
+        $categories->map( fn($category) => WorkoutCategory::create($category) );
     }
 }
